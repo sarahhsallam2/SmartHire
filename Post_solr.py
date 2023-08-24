@@ -1,5 +1,7 @@
 from urllib.request import urlopen
+from create_core import core_name
 from embeddings import batch_encode_to_vectors
+from index_documents import index_documents
 import os
 import csv
 import pysolr
@@ -30,16 +32,21 @@ def get_documents_in_folder(folder_path):
             name_without_extension = os.path.splitext(basename)[0]
 
             name_without_extension+='.csv'
-            csv_file_path= create_csv(name_without_extension)
+            core_name='software_tester'
+            csv_file_path= create_csv(core_name,name_without_extension)
             # call def batch_encode_to_vectors
             batch_encode_to_vectors(file_path,csv_file_path)
+
+            # call index documents folder
+            index_documents(file_path,csv_file_path,core_name)
             #push_to_solr(file_path,id_number)
             id_number+=1
             #with open(file_path, 'r') as f:
             #   file_contents = f.read()
 
-def create_csv(file_name):
-    directory = 'E:\ITworx\CVs\Converted'
+def create_csv(core_name,file_name):
+    directory = 'E:\ITworx\CVs\Documents'+"\\" + core_name
+    print("core name: "+ core_name)
     if not os.path.exists(directory):
         os.makedirs(directory)
 
@@ -51,4 +58,4 @@ def create_csv(file_name):
     return filepath     
        
 if __name__ == "__main__":
-    get_documents_in_folder()   
+    get_documents_in_folder('E:\ITworx\CVs\Documents\software_tester')   

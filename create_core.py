@@ -2,6 +2,7 @@ import pysolr
 import os
 import requests
 
+core_name=''
 
 def create_cores(core_name):
     solr_base_url = "http://localhost:8983/solr"
@@ -17,6 +18,7 @@ def create_cores(core_name):
 
     response = requests.post(create_core_url, data=data)
     print(response.text)
+    return core_name
 
 
 def create_folder_for_core(core_name):
@@ -33,4 +35,5 @@ def create_folder_for_core(core_name):
 
 if __name__ == "__main__":
     #create_cores('software_tester')
-    create_folder_for_core('software_tester')
+    core_name= create_cores('software_tester')
+    create_folder_for_core(core_name)
