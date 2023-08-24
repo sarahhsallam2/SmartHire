@@ -1,4 +1,4 @@
-from sentence_transformers import SentenceTransformer
+'''from sentence_transformers import SentenceTransformer
 import torch
 import sys
 from itertools import islice
@@ -34,16 +34,10 @@ def batch_encode_to_vectors(input_filename, output_filename):
                 for v in vectors:
                     out.write(','.join([str(i) for i in v]))
                     out.write('\n')
+                    
 
 def encode(documents):
     embeddings = model.encode(documents, show_progress_bar=True)
     print('vector dimension: ' + str(len(embeddings[0])))
     return embeddings
-
-def main():
-    input_filename = "E:\ITworx\CVs\Documents\JohnSmithCV.pdf"
-    output_filename = "E:\ITworx\CVs\Converted\document1_vectors.csv"
-    batch_encode_to_vectors(input_filename, output_filename)
-
-if __name__ == "__main__":
-        main()
+'''

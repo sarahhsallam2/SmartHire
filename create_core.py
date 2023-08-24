@@ -7,13 +7,14 @@ core_name=''
 def create_cores(core_name):
     solr_base_url = "http://localhost:8983/solr"
     config_set_path = "E:\ITworx\Solr\solr-9.3.0\server\solr\my_configsets"  # Replace with your config set directory path
-
+    schema_name= "E:\ITworx\Solr\solr-9.3.0\server\solr\my_configsets\schema.xml" # replace with your schema directory path
     create_core_url = f"{solr_base_url}/admin/cores"
     data = {
         "action": "CREATE",
         "name": core_name,
         "instanceDir": core_name,
-        "configSet": config_set_path
+        "configSet": config_set_path,
+        "schema": schema_name
     }
 
     response = requests.post(create_core_url, data=data)
@@ -33,7 +34,14 @@ def create_folder_for_core(core_name):
         print(f"Directory '{directory_path}' already exists.")
     return directory_path
 
+def delete_documents_in_core(core_name):
+    solr = pysolr.Solr('http://localhost:8983/solr/'+ core_name)
+    solr.delete(q='*:*')
+    solr.commit()
+
 if __name__ == "__main__":
-    #create_cores('software_tester')
-    core_name= create_cores('software_tester')
-    create_folder_for_core(core_name)
+    pass
+    #create_cores('software_engineer')
+    #core_name= create_cores('software_engineer')
+    #create_folder_for_core(core_name)
+    delete_documents_in_core('software_engineer')
