@@ -13,6 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/Registration.css" rel="stylesheet" />
     <title>Document</title>
+    <style>body{
+      background-color:rgb(126, 181, 213);
+  }
+  </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -70,7 +74,7 @@
                       <div class="invalid-feedback">
                         Please provide a valid Phone Number
                       </div>
-                      <div class="form-outline mb-4">
+                      <!-- <div class="form-outline mb-4">
                         <label for="bankAccountQuestion">Do you have a bank account?</label>
                         <div class="form-outline mb-4">
                           <label>
@@ -80,8 +84,7 @@
                             <input type="radio" name="bankAccountOption" value="no" id="bankAccountNo"> No
                           </label>
                         </div>
-                      </div>
-                    
+                      </div> -->
                       <div class="form-outline mb-4" id="accountNumberSection" style="display: none;">
                         <input type="text" class="form-control" id="validationCustom03" placeholder="Account Number" required style="padding: 13px;">
                       </div>  
@@ -96,13 +99,8 @@
                           <option value="credit">Individual Retirment Account</option>
                         </select>
                       </div> 
-                    <div class="mb-4">
-                        <label for="exampleFormControlFile1">National ID / Passport</label>
-                        <input type="file" class="form-control" id="exampleFormControlFile1" required>
-                        <div class="invalid-feedback">
-                          Please choose a file.
-                        </div>
-                      </div>
+                      <br>
+
                     <div class="mb-4">
                       <input type="password" class="form-control" id="inputPassword" placeholder="Password" required style="padding: 13px;">
                       <div class="invalid-feedback">
