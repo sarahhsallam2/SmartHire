@@ -1,6 +1,6 @@
 import requests
 import json
-from embeddings import get_sentence_embedding
+from backend.embeddings import get_sentence_embedding
 import re
 from collections import Counter
 from Post_solr import create_dictionary

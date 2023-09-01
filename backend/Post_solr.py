@@ -1,5 +1,5 @@
 from urllib.request import urlopen
-from embeddings import batch_encode_to_vectors
+from backend.embeddings import batch_encode_to_vectors
 from index_documents import index_documents, index_extracted_documents
 from extract_text import extract_text_from_pdf, preprocess_text_modified
 import os
