@@ -1,0 +1,5 @@
+Aggregate scores by CV
+List the top 10 CV's
+Display: CV, Summary, Matched chunks
+
+Solr to return more than 9 chunks
