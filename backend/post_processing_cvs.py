@@ -3,7 +3,7 @@ import requests
 import math
 import pysolr
 
-# function to get the top ranked cvs based on the calculated total score
+# function to get the top ranked cvs based on the calculated total score ...
 
 def get_top_ranked_cvs(prompt,percentage_of_cvs):
     search_result=query_user_prompt(prompt)
