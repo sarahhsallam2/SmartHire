@@ -23,6 +23,21 @@
     .button:hover {
         background-color: #0056b3; /* Background color on hover */
     }
+   
+    .pricing-options {
+      display: flex;
+      justify-content: space-between;
+      /* Adjust alignment and spacing as needed */
+      margin-top: 20px;
+    }
+
+    .pricing-option {
+      flex-basis: calc(30% - 20px); /* Smaller width */
+      /* Adjust spacing as needed */
+      /* Add any other pricing option styling here */
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
 </style>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -135,6 +150,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="features.html">Features</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="dashboard.html">DashBoard <span class="sr-only">(current)</span></a>
               </li>
             </ul>
             <div class="quote_btn-container">
@@ -352,7 +370,7 @@
   <!-- end case section -->
 
   <!-- client section -->
-  <section class="client_section ">
+  <section class="client_section">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -360,146 +378,116 @@
         </h2>
       </div>
     </div>
-    <div id="customCarousel2" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="box">
-                  
-                    <div class="detail-box">
-                      <div class="client_info">
-                        <div class="client_name">
-                          <h5>
-                            Basic
-                          </h5>
-                          <br>
-                          <h5>
-                            $49.99 
-                          </h5>
-                          <h6>
-                            Customer      
-                              </h6>
-                        </div>
-                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                      </div>
-                      <p>
-                        ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
-                      </p>
-                      
-                      <ul>
-                        <li>‎ 50 Resumes</li>
-                        <li>10 Keywords</li>
-                        <li>‎‎Email Support</li>
-                        <li>‎‎‎‎Basic Analytics
-                        </li> 
-                      </ul>
-                      <form action="/subscribe" method="POST">
-                        <div class="button-container">
-                            <button class="button" type="submit">Subscribe</button>
-                        </div>
-                    </form>
-                    </div>
-                  </div>
-                </div>
+    <div class="pricing-options">
+      <div class="pricing-option">
+        <div class="box">
+          <div class="detail-box">
+            <div class="client_info">
+              <div class="client_name">
+                <h5>
+                  Basic
+                </h5>
+                <br>
+                <h5>
+                  $49.99 
+                </h5>
+                <h6>
+                  Customer      
+                </h6>
               </div>
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
             </div>
-          </div>
-       
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 mx-auto">
-                <div class="box">
-                
-                  <div class="detail-box">
-                    <div class="client_info">
-                      <div class="client_name">
-                        <h5>
-                          Pro
-                        </h5>
-                        <br>
-                        <h5>
-                          $99.99 
-                        </h5>
-                        <h6>
-                          Customer      
-                            </h6>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
-                    </p>
-                    
-                    <ul>
-                      <li>‎ 200 Resumes</li>
-                      <li>30 Keywords</li>
-                      <li>‎‎Priority Support</li>
-                      <li>‎‎‎‎  Advanced Analytics</li> 
-                    </ul>
-                    <form action="/subscribe" method="POST">
-                      <div class="button-container">
-                          <button class="button" type="submit">Subscribe</button>
-                      </div>
-                  </form>
-                  </div>
-                </div>
+            <p>
+              ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
+            </p>
+            <ul>
+              <li>‎ 50 Resumes</li>
+              <li>10 Keywords</li>
+              <li>‎‎Email Support</li>
+              <li>‎‎‎‎Basic Analytics</li> 
+            </ul>
+            <form action="/subscribe" method="POST">
+              <div class="button-container">
+                <button class="button" type="submit">Subscribe</button>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-10 mx-auto">
-                <div class="box">
-                 
-                  <div class="detail-box">
-                    <div class="client_info">
-                      <div class="client_name">
-                        <h5>
-                          Premium
-                        </h5>
-                        <br>
-                        <h5>
-                          $199.99
-                        </h5>
-                        <h6>
-                          Customer
-                        </h6>
-                       
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
-                    </p>
-                    
-                    <ul>
-                      <li>Unlimited Resumes</li>
-                      <li>Unlimited Keywords</li>
-                      <li>24/7 Support</li>
-                      <li>Custom Reports</li> 
-                    </ul>
-                    <form action="/subscribe" method="POST">
-                      <div class="button-container">
-                          <button class="button" type="submit">Subscribe</button>
-                      </div>
-                  </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
-      <ol class="carousel-indicators">
-        <li data-target="#customCarousel2" data-slide-to="0" class="active"></li>
-        <li data-target="#customCarousel2" data-slide-to="1"></li>
-        <li data-target="#customCarousel2" data-slide-to="2"></li>
-      </ol>
+
+      <!-- Copy and paste this section for the "Pro" pricing option -->
+      <div class="pricing-option">
+        <div class="box">
+          <div class="detail-box">
+            <div class="client_info">
+              <div class="client_name">
+                <h5>
+                  Pro
+                </h5>
+                <br>
+                <h5>
+                  $99.99 
+                </h5>
+                <h6>
+                  Customer      
+                </h6>
+              </div>
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+            </div>
+            <p>
+              ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
+            </p>
+            <ul>
+              <li>‎ 200 Resumes</li>
+              <li>30 Keywords</li>
+              <li>‎‎Priority Support</li>
+              <li>‎‎‎‎Advanced Analytics</li> 
+            </ul>
+            <form action="/subscribe" method="POST">
+              <div class="button-container">
+                <button class="button" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy and paste this section for the "Premium" pricing option -->
+      <div class="pricing-option">
+        <div class="box">
+          <div class="detail-box">
+            <div class="client_info">
+              <div class="client_name">
+                <h5>
+                  Premium
+                </h5>
+                <br>
+                <h5>
+                  $199.99
+                </h5>
+                <h6>
+                  Customer
+                </h6>
+              </div>
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+            </div>
+            <p>
+              ‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
+            </p>
+            <ul>
+              <li>Unlimited Resumes</li>
+              <li>Unlimited Keywords</li>
+              <li>24/7 Support</li>
+              <li>Custom Reports</li> 
+            </ul>
+            <form action="/subscribe" method="POST">
+              <div class="button-container">
+                <button class="button" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- end client section -->
