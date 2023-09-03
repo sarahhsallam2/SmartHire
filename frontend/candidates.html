@@ -14,6 +14,107 @@
 
   <title>SmartHire</title>
 <style>
+
+/* Style for the filter section */
+.filter-section {
+    text-align: center;
+    margin: 100px;
+}
+
+/* Style for the heading */
+.filter-section h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+/* Style for the checkbox list */
+.filter-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style for individual checkboxes */
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Style for the custom checkbox */
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Style for the custom checkbox when checked */
+.checkbox-input:checked + .checkbox-custom::after {
+    content: '\2713'; /* Checkmark symbol */
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    line-height: 20px;
+}
+
+  .pie-chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .pie-chart {
+    width: 300px; /* Adjust the size */
+    height: 300px; /* Adjust the size */
+    border-radius: 50%;
+    background: conic-gradient(
+        #eb91dd 0% 30%,  /* Red */
+        #cfaee4 30% 60%, /* Green */
+        rgb(223, 235, 190) 60% 100% /* Blue */
+    );
+    position: relative;
+    margin-top: -50px; /* Add margin-top to raise the pie chart */
+}
+        .container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* To horizontally align elements */
+    padding: -50px; /* Adjust padding as needed */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* To horizontally align elements */
+}
+
+
+.filter-section {
+    flex-shrink: 0; /* Prevent the filter section from shrinking */
+    margin-left: 490px; /* Add some margin to separate the sections */
+}
+
+
+        .label-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .label {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+       
+  
+        /* Optional: Center the pie chart */
+    
    h1 {
             color: rgb(20, 18, 18);
             text-align: center;
@@ -118,16 +219,52 @@
         </nav>
       </div>
     </header>
+
     <!-- end header section -->
   </div>
+    <!-- <div class="container">
+      <div class="pie-chart"></div>
+  </div> -->
+  <div class="container">
+    <div class="filter-section">
+        <h2>Filters</h2>
+        <ul class="filter-list">
+            <li>
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox-input" checked disabled>
+                    <span class="checkbox-custom"></span>
+                    Country
+                </label>
+            </li>
+            <li>
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox-input" checked disabled>
+                    <span class="checkbox-custom"></span>
+                    Location
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox-input" checked disabled>
+                  <span class="checkbox-custom"></span>
+                  Education level
+              </label> <label class="checkbox">
+                <input type="checkbox" class="checkbox-input" checked disabled>
+                <span class="checkbox-custom"></span>
+                Number of projects
+            </label>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="pie-chart"></div>
+    </div>
+</div>
 
-  
   <div class="sidebar">
     <a href="startscreening.html" id="startscreening-link">Start Screening</a>
     <a href="acceptedresumes.html" id="acceptedresumes">Accepted Resumes</a>
     <a href="candidates.html" id="candidates" class="active">Candidates Analytics</a>
   </div>
- 
+  
   <script>
     // Get the current page pathname
     const currentPagePath = window.location.pathname;
