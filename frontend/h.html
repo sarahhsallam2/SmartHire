@@ -1,38 +1,46 @@
-// pie.html
- 
-<html>
- 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-        // Adding ej2.min.js CDN link
-    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Steps</title>
+    <style>
+        /* CSS for the process steps */
+        .process-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .step {
+            flex: 1;
+            text-align: center;
+        }
+
+        .step-number {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .step-description {
+            margin-top: 10px;
+        }
+    </style>
 </head>
- 
 <body>
-    <div id="container"></div>
-    <script>
- 
-        var pie = new ej.charts.AccumulationChart({
-            //Initializing Series
-            series: [
-                {
-                    dataSource: [
-                        { 'x': 'Chrome', y: 37 }, { 'x': 'UC Browser', y: 17 },
-                        { 'x': 'iPhone', y: 19 },
-                        { 'x': 'Others', y: 4 }, { 'x': 'Opera', y: 11 },
-                        { 'x': 'Android', y: 12 }
-                    ],
-                    dataLabel: {
-                        visible: true,
-                        position: 'Inside',
-                    },
-                    xName: 'x',
-                    yName: 'y'
-                }
-            ],
-        });
-        pie.appendTo('#container');
-    </script>
+    <div class="process-container">
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-description">Step One</div>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-description">Step Two</div>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-description">Step Three</div>
+        </div>
+    </div>
 </body>
- 
 </html>
- 

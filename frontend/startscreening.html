@@ -56,6 +56,37 @@
     .sidebar a.active {
       background-color: #0074D9;
     }
+    .steps-container {
+      width: 1000px; /* Set the width of the container */
+      height: calc(100vh - 180px); /* Adjust the height as needed based on your layout */
+      overflow-y: auto; /* Enable vertical scrolling */
+      /* border: 1px solid #ccc; */
+      padding: 10px;
+      position: fixed;
+      top: 180px; /* Adjust the top position to align with your header */
+      right: 10px; /* Move to the right to respect the sidebar */
+    }
+
+    .step {
+      margin-bottom: 20px;
+    }
+
+    .step-number {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .step-description {
+      margin-top: 10px;
+    }
+    .dropdown {
+      display: inline-block;
+    }
+
+    .dropdown select {
+      padding: 10px;
+      font-size: 16px;
+    }
   </style>
 
   <!-- bootstrap core css -->
@@ -121,13 +152,48 @@
     <!-- end header section -->
   </div>
 
-  
+  <div class="steps-container">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-description">Please choose the job position</div>
+    <div class="dropdown">
+      <select>
+        <option value="" disabled selected>Job opening  </option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-description">Import CVs</div>
+      <button type="button" onclick="importCVs()">Import</button>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-description">Step Three</div>
+      <label for="searchInput">Enter your search:</label>
+      <input type="text" id="searchInput" placeholder="Search..." />
+      <button type="button" onclick="performSearch()">Search</button>
+    </div>
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-description">Specify the desired percentage of matching cvs </div>
+      <div>
+        <input type="text" placeholder="text" required />
+      </div>
+    </div>
+    <br>
+    <br>
+    <button id="submitButton"> Start Screening</button>
+    <div id="errorMessage" class="hidden">Please complete all steps before submitting.</div>
+    
   <div class="sidebar">
     <a href="startscreening.html" id="startscreening-link" class="active">Start Screening</a>
     <a href="acceptedresumes.html" id="acceptedresumes">Accepted Resumes</a>
     <a href="candidates.html" id="candidates">Candidates Analytics</a>
   </div>
-
   
   <script>
     // Get the current page pathname
@@ -153,6 +219,90 @@
         link.classList.add("active");
       }
     });
+    const steps = document.querySelectorAll('.step');
+    const submitButton = document.getElementById('submitButton');
+    let currentStep = 0;
+
+    // Function to show the next step
+    function showNextStep() {
+      steps[currentStep].classList.add('hidden-step');
+      currentStep++;
+      if (currentStep < steps.length) {
+        steps[currentStep].classList.remove('hidden-step');
+      } else {
+        // All steps are completed, trigger necessary actions
+        performFinalActions();
+      }
+    }
+
+    // Function to perform final actions when all steps are completed
+    function performFinalActions() {
+      // Add your logic here for what should happen when the "Submit" button is clicked
+      alert('All steps completed. Performing final actions.');
+    }
+
+    // Event listener for the "Submit" button
+    submitButton.addEventListener('click', showNextStep);
+    function importCVs() {  //for your python codeee
+
+
+  // Function to trigger the import action
+    // Call the Python backend API here
+    fetch('/import_cv', {
+      method: 'POST',
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response from the server, if needed
+        console.log(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+  function performSearch() {
+    const searchQuery = document.getElementById('searchInput').value;
+
+    // You can use the searchQuery value to perform your search actions
+    // For example, you can send it to the backend for processing
+    alert('Performing search for: ' + searchQuery);
+    // Function to show the next step
+function showNextStep() {
+  // Check if the current step is filled
+  if (!isStepFilled(currentStep)) {
+    errorMessage.classList.remove('hidden');
+    // Scroll down by a certain number of pixels (adjust as needed)
+    window.scrollBy(0, 200); // Scroll down by 200 pixels
+    return;
+  }
+
+  steps[currentStep].classList.add('hidden-step');
+  currentStep++;
+  if (currentStep < steps.length) {
+    steps[currentStep].classList.remove('hidden-step');
+  } else {
+    // All steps are completed, trigger necessary actions
+    performFinalActions();
+  }
+}
+
+  }
+
+
+
+
+// @app.route('/import_cv', methods=['POST'])
+// def import_cv():
+//     # Implement your import logic here
+//     # This can include saving the uploaded file, processing it, etc.
+
+//     # For demonstration purposes, let's send a response back
+//     return jsonify({'message': 'CVs imported successfully'})
+
+// if __name__ == '__main__':
+//     app.run(debug=True)
+  
+ 
   </script>
   
 

@@ -332,15 +332,21 @@ a:focus {
 
 }
 
-.slider_section .detail-box .btn-box .btn1:hover {
-  color: #ffffff;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-}
 
 .slider_section .img-box img {
-  width: 100%;
+  width: 50%;
 }
+.form-group {
+  margin-bottom: 0; /* Remove margin between form groups */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
 
 .slider_section .carousel-indicators {
   position: unset;
