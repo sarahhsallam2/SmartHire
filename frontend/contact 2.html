@@ -50,25 +50,24 @@
               <li class="nav-item ">
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="about.html"> About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="service.html">Services</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="features.html">Features</a>
               </li>
               <li class="nav-item" >
                 <a class="nav-link" href="dashboard.html">DashBoard <span class="sr-only">(current)</span></a>
               </li>
             </ul>
-            <a href="Login.html" class="quote_btn" style="margin-right: 10px; display: inline-block; padding: 10px 20px; background-color: #0074D9; color: #fff; text-decoration: none; border-radius: 5px; text-align: center; cursor: pointer;">Login</a>
-            <button onclick="startFreeTrial()">Free Trial</button>
-
+            <div class="quote_btn-container">
+              <a href="" class="quote_btn">
+                Get A Quote
+              </a>
+            </div>
           </div>
         </nav>
       </div>
@@ -76,37 +75,51 @@
     <!-- end header section -->
   </div>
 
-  <!-- about section -->
+  <!-- contact section -->
 
-  <section class="about_section layout_padding layout_margin">
-    <div class="container  ">
+  <section class="contact_section layout_padding">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
+        <div class="col-md-5 col-lg-4 offset-md-1">
+          <div class="form_container">
             <div class="heading_container">
               <h2>
-                About Us
+                Request A Call back
               </h2>
             </div>
-            <p>
-              Meet our AI-powered CV Screening Software that'll change the game for HR departments everywhere. Save time, energy, and resources by letting our AI handle the grunt work. It's your time to shine.
-            </p>
-            <a href="">
-              Read More
-            </a>
+            <form action="">
+              <div>
+                <input type="text" placeholder="Full Name " />
+              </div>
+              <div>
+                <input type="email" placeholder="Email" />
+              </div>
+              <div>
+                <input type="text" placeholder="Phone number" />
+              </div>
+              <div>
+                <input type="text" class="message-box" placeholder="Message" />
+              </div>
+              <div class="d-flex ">
+                <button>
+                  SEND
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="">
+        <div class="col-md-6 col-lg-7 px-0">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap"></div>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- end about section -->
+  <!-- end contact section -->
 
   <div class="footer_container">
     <!-- info section -->
@@ -120,13 +133,14 @@
                 SmartHire
               </h4>
               <p>
-                Save time, energy, and resources by letting our AI handle the grunt work. It's your time to shine.              </p>
+                Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+              </p>
             </div>
           </div>
           <div class="col-md-6 col-lg-2 mx-auto">
             <div class="info_link_box">
               <h4>
-                Company
+                Links
               </h4>
               <div class="info_links">
                 <a class="" href="index.html">
@@ -138,40 +152,21 @@
                 <a class="" href="service.html">
                   Services
                 </a>
-                <a class="" href="service.html">
-                  Jobs
-                </a>
                 <a class="" href="contact.html">
                   Contact Us
                 </a>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-2 mx-auto">
-            <div class="info_link_box">
-              <h4>
-                Product
-              </h4>
-              <div class="info_links">
-                <a class="" href="features.html">
-                  Features
-                </a>
-                <a class="" href="pricing.html">
-                  Pricing
-                </a>
-                <a class="" href="index.html">
-                  FAQ
-                </a>
-                <a class="" href="index.html">
-                  Jobs
-                </a>
-               
-              </div>
-            </div>
-          </div>
           <div class="col-md-6 col-lg-3 ">
-           
-            
+            <h4>
+              Subscribe
+            </h4>
+            <form action="#">
+              <input type="text" placeholder="Enter email" />
+              <button type="submit">
+                Subscribe
+              </button>
             </form>
           </div>
           <div class="col-md-6 col-lg-3 mb-0 ml-auto">
@@ -232,7 +227,6 @@
     </footer>
     <!-- footer section -->
   </div>
-
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>

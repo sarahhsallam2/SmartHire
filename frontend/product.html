@@ -25,7 +25,18 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+<style>
+.img-box img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto; /* Maintain the image's aspect ratio */
+  width: 100px; /* Set a specific width for the image */
+  height: 175px; /* Set a specific height for the image */
+}
 
+
+
+
+</style>
 </head>
 
 <body class="sub_page">
@@ -59,15 +70,16 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="features.html">Features</a>
+              </li>
               <li class="nav-item" >
                 <a class="nav-link" href="dashboard.html">DashBoard <span class="sr-only">(current)</span></a>
               </li>
             </ul>
-            <div class="quote_btn-container">
-              <a href="" class="quote_btn">
-                Get A Quote
-              </a>
-            </div>
+            <a href="Login.html" class="quote_btn" style="margin-right: 10px; display: inline-block; padding: 10px 20px; background-color: #0074D9; color: #fff; text-decoration: none; border-radius: 5px; text-align: center; cursor: pointer;">Login</a>
+            <button onclick="startFreeTrial()">Free Trial</button>
+
           </div>
         </nav>
       </div>
@@ -83,44 +95,104 @@
           Products
         </h2>
       </div>
+   
       <div class="row">
         <div class="col-md-6">
           <div class="box">
-            <div class="img-box">
-              <img src="images/case-1.jpg" alt="">
-            </div>
             <div class="detail-box">
-              <h5>
-                Automated keyword matching              </h5>
-              <p>
-                Our AI combs through resumes to find matches for the keywords or synonyms provided by HR, ensuring that applicants truly fit the job requirements.              </p>
-             
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </a>
+              <h3>
+                Product description</h3>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.             
+                                <div class="btn-box">
+                                  <a href="index.html">
+                                   View Page
+                                  </a>
+                                </div>                </a>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+
+          <div class="box">
+            <div class="img-box">
+              <!-- Insert your image here -->
+              <img src="img/cvpic.jpeg" alt="Product Image">
             </div>
           </div>
         </div>
+
         <div class="col-md-6">
           <div class="box">
             <div class="img-box">
-              <img src="images/case-2.jpg" alt="">
+              <!-- Insert your image here -->
+              <img src="img/download.jpeg" alt="Product Image">
             </div>
+          </div>
+          <br>
+          <br>
+          <br>
+
+          <div class="box">
+            <div class="img-box">
+
+            </div>
+          
+
             <div class="detail-box">
-              <h5>
-                Transparent ratings and rankings              </h5>
-              <p>
-                Candidates are rated based on keyword matches, and resumes ranked descendingly. This data-driven approach makes hiring decisions easier and fairer.              </p>
-              <a href="">
-                <span>
-                  Read More
-                </span>
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </a>
+              <h3>
+                Product features</h3>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                <div class="btn-box">
+                                  <a href="features.html">
+                                   View Page
+                                  </a>
+                                </div>   
+            </div>
+          </div>
+        </div> 
+        </div>
+      </div>
+
+        
+        <div class="row">
+          <div class="col-md-6">
+           
+            <div class="box">
+              <div class="img-box">
+              </div>
+              <div class="detail-box">
+                <h3>
+                  Available subscription plans</h3>
+                                <p>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.       
+                
+                                  <div class="btn-box">
+                                    <a href="pricing.html">
+                                     View Page
+                                    </a>
+                                  </div>      
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box">
+              <div class="img-box">
+                <!-- Insert your image here -->
+                <img src="img/subscri.jpeg" alt="Product Image">
+              </div>
             </div>
           </div>
         </div>
+        </div>
+        
       </div>
+     
     </div>
+
   </section>
   <!-- end service section -->
 
